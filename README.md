@@ -1,5 +1,6 @@
 # Odometer
 Odometer.js 数字滚动
+
 ![image](https://github.com/Takeos/Odometer/blob/master/dist/demo.gif)
 
 ```
