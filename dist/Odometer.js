@@ -1,5 +1,5 @@
 const Odometer = (function(win,doc) {
-    class Odometer {
+    class OdometerFn {
         constructor(x, y) {
             this.setting = {
                 len : null, //默认最小位数
@@ -80,5 +80,5 @@ const Odometer = (function(win,doc) {
             for(let i in n1){n[i] = n1[i]};
         }
     }
-    return Odometer;
+    return OdometerFn;
 })(window,document);
