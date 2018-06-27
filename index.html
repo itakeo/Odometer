@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>Examples</title>
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" name="viewport"/>
+</head>
+<style>
+*{margin: 0;padding: 0;box-sizing: border-box;}
+
+.number-animate{line-height:45px; height: 45px;font-size: 40px;overflow: hidden; display: inline-block; position: relative; }
+.number-animate .number-animate-dot{ width: 21px; float: left; text-align: center;}
+.number-animate .number-animate-dom{ width: 27px;  text-align: center; float: left; position: relative; top: 0;}
+.number-animate .number-animate-dom span,.number-animate .number-animate-dot span{float: left;width: 100%;height: 45px;line-height: 1;}
+.OdometerBg {margin: 20px;}
+.OdometerBg  .number-animate  .number-animate-dom,.OdometerBg  .number-animate  .number-animate-dot{width: 40px;}
+.OdometerBg  .number-animate  .number-animate-dot span{  background: #222;color: yellow;border-left: 1px solid #fff;}
+.OdometerBg  .number-animate  .number-animate-dom{ background: #222;color: yellow;border-left: 1px solid #fff;}
+</style>
+<body>
+    <div class="Odometer1 OdometerBg"></div>
+    <div class="Odometer2 OdometerBg"></div>
+</body>
+<script src="dist/Odometer.js"></script>
+<script>
+;(function(){
+    var num = 69,num2 = 3545;
+    var odo1 = new Odometer('.Odometer1',{
+        num : num,
+        dot : 2
+    });
+    var odo2 = new Odometer('.Odometer2',{
+        num : num2,
+        symbol : ','
+    });
+    setInterval(function(){
+        num *=2.35
+        num2 +=117
+        odo1.update(num)
+        odo2.update(num2)
+    },1200)
+})();
+</script>
+</html>
